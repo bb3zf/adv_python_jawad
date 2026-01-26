@@ -1,0 +1,11 @@
+def pul_11(*num):
+    print(sum(num))
+
+def pul_12(func):
+    def wrapper(*num):
+        d = sum(num) // len(num)
+        return func(d)
+    return wrapper
+
+d_func = pul_12(pul_11)
+d_func(1, 2, 3, 4, 5)
