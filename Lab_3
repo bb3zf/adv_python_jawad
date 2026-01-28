@@ -1,0 +1,74 @@
+students = {
+    "S001": {
+        "name": "Alice Chen",
+        "courses": {
+            "CS101": {"grade": 92, "credits": 3},
+            "MATH201": {"grade": 88, "credits": 4},
+            "AI301": {"grade": 95, "credits": 3},
+        },
+        "advisor": "Dr. Smith",
+    },
+    "S002": {
+        "name": "Bob Lee",
+        "courses": {
+            "CS101": {"grade": 85, "credits": 3},
+            "MATH201": {"grade": 90, "credits": 4},
+        },
+        "advisor": "Dr. Patel",
+    },
+}
+
+s1 = students\
+    ["S001"]\
+    ["courses"]\
+    ["AI301"]["grade"]
+print("Alice's AI301 grade: ", s1)
+
+s1_g1 = students\
+    ["S001"]\
+    ["courses"]\
+    ["CS101"]\
+    ["grade"]
+s1_g2 = students\
+    ["S001"]\
+    ["courses"]\
+    ["MATH201"]\
+    ["grade"]
+s2_g1 = students\
+    ["S002"]\
+    ["courses"]\
+    ["CS101"]\
+    ["grade"]
+s2_g2 = students\
+    ["S002"]\
+    ["courses"]\
+    ["CS101"]\
+    ["credits"]
+s2_g3 = students\
+    ["S002"]\
+    ["courses"]\
+    ["MATH201"]\
+    ["grade"]
+s2_g4 = students\
+    ["S002"]\
+    ["courses"]\
+    ["MATH201"]\
+    ["credits"]
+
+totall_credits = s2_g2 + s2_g4
+a = s2_g2*3.5
+b = s2_g4*4
+totall=(a+b)
+GPA=totall/totall_credits
+
+print("Bob's GPA: ", GPA)
+
+print("S001 Student: ", students["S001"]["name"])
+
+Bob = s2_g1 + s2_g3
+Alice = s1_g1 + s1_g2
+Ag = Bob + Alice
+print("Average grades for all students: ", Ag/4)
+
+if GPA>3.5:
+    print("Highest GPA: ", GPA)
