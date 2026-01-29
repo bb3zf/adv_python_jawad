@@ -14,3 +14,4 @@ with open('data.json', 'w') as f:
 
 with open('data.json', 'r') as f:
     data2 = json.load(f)
+    print(data2)
