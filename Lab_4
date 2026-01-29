@@ -1,0 +1,16 @@
+import json
+
+data = {
+    "id": 101,
+    "course": "Machine Learning",
+    "status": "Completed"
+}
+
+data1= json.loads('{"data":"id"}')
+print(data1)
+
+with open('data.json', 'w') as f:
+    json.dump(data1, f, indent=4)
+
+with open('data.json', 'r') as f:
+    data2 = json.load(f)
